@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Bili23_Downloader",
+        "platform": "Windows、Linux、macOS",
+        "comment": "源代码，需 Python 环境",
+        "github_url": "https://github.com/ScottSloan/Bili23-Downloader",
+        "onedrive_url": "",
+        "lanzou_url": "",
+        "sha256": "",
+        "enable": true
+    },
+    {
+        "name": "Bili23_Downloader-{version}-windows-x64.zip",
+        "platform": "Windows x64",
+        "comment": "Windows 便携版",
+        "github_url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v{version}/Bili23_Downloader-{version}-windows-x64.zip",
+        "onedrive_url": "",
+        "lanzou_url": "https://wwx.lanzout.com/iK6Mn39mdeif",
+        "sha256": "",
+        "enable": true
+    },
+    {
+        "name": "Bili23_Downloader-{version}-windows-x64-setup.exe",
+        "platform": "Windows x64",
+        "comment": "Windows 独立安装程序，蓝奏云密码：5c1b",
+        "github_url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v{version}/Bili23_Downloader-{version}-windows-x64-setup.exe",
+        "onedrive_url": "",
+        "lanzou_url": "https://wwx.lanzout.com/igDju39mdafi",
+        "sha256": "",
+        "enable": true
+    },
+    {
+        "name": "Bili23_Downloader-{version}-linux-amd64.deb",
+        "platform": "Linux x64",
+        "comment": "适用于 Debian 及其衍生发行版",
+        "github_url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v{version}/Bili23_Downloader-{version}-linux-amd64.deb",
+        "onedrive_url": "",
+        "lanzou_url": "",
+        "sha256": "",
+        "enable": false
+    }
+]
