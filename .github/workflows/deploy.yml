@@ -30,33 +30,29 @@ jobs:
           CLOUDREVE_PASSWORD: ${{ secrets.CLOUDREVE_PASSWORD }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          cd doc
-
           python3 ./github_api.py
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'npm'
-          cache-dependency-path: doc/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
       - name: Install dependencies
         run: |
-          cd doc
           npm ci
 
       - name: Build with VitePress
         run: |
-          cd doc
           npm run docs:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: doc/.vitepress/dist
+          path: ./.vitepress/dist
 
   deploy:
     environment:
