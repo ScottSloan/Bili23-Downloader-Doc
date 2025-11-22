@@ -61,7 +61,7 @@ Windows 用户请先确保安装 Microsoft Visual C++ 2015-2022 运行库，[点
 欢迎[加入社区](https://bili23.scott-sloan.cn/doc/community.html)，获取项目最新动态、问题答疑和技术交流。
 :::
 
-文件 SHA265 值校验
+文件 SHA256 值校验
 <table>
   <thead>
     <tr>
@@ -118,20 +118,18 @@ Python 版本需要为 3.10 及以上。
 
 [![pElIuQJ.png](https://s21.ax1x.com/2025/02/23/pElIuQJ.png)](https://imgse.com/i/pElIuQJ)
 
-完成 Python 环境安装后，建议执行下面的命令更换 pip 源为清华源，加快 pip 包下载速度：
+安装完成后，建议执行下面的命令更换 pip 源为清华源，加快 pip 包下载速度：
 ```bash
 pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 :::
 
 ### 克隆仓库
-若已安装 git，执行以下命令克隆仓库：
+执行下面的命令克隆仓库：
 ```bash
 git clone https://github.com/ScottSloan/Bili23-Downloader.git
 cd Bili23-Downloader
 ```
-
-若系统未安装 git，请下载上方的源码版并解压，进入到 requirements.txt 同一级目录。
 
 ### 安装依赖
 #### Windows & macOS
@@ -145,51 +143,47 @@ pip install -r requirements.txt
 | 包 | 版本 | 备注 |
 | -- | -- | -- |
 | requests | ==2.32.5 | - |
-| wxPython | ==4.2.3 | - |
+| wxPython | ==4.2.4 | - |
 | qrcode[pil] | ==7.4.2 | 必须附带 [pil]（Pillow），否则程序可能无法运行 |
 | python-vlc | ==3.0.21203 | - |
-| protobuf | ==6.32.0 | - |
+| protobuf | ==6.33.0 | - |
 | websockets | ==15.0.1 | -- |
 | pycryptodome | ==3.23.0 | -- |
 
-用户也可以手动安装：
-```bash
-pip install wxPython==4.2.3 qrcode[pil]==7.4.2 requests==2.32.5 python-vlc==3.0.21203 protobuf==6.32.0 websockets==15.0.1 pycryptodome==3.23.0
-```
 #### Linux
-由于 Linux 平台各发行版存在差异，wxPython 安装较为繁琐，以下提供最简便的安装方式。
-wxPython 官方提供 Debian、Ubuntu、Fedora 和 Centos 等发行版 wheel 包，点击[此处](https://extras.wxpython.org/wxPython4/extras/linux/gtk3/)跳转。
+Linux 平台需手动编译 wxPython 安装。
 
-以 Ubuntu 24.04 系统为例，执行下面的命令即可安装：
+执行下面的命令安装编译所需依赖（以 Ubuntu 为例）：
+
 ```bash
-pip install -U -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-24.04/ wxPython
+sudo apt install build-essential python3-dev libgtk-3-dev libwebkit2gtk-4.0-dev libgstreamer-plugins-base1.0-dev libsdl2-dev libsm-dev libxtst-dev libjpeg-dev libpng-dev libtiff-dev libgdk-pixbuf2.0-dev gstreamer1.0-plugins-base
 ```
 
-随后再安装其他依赖：
+安装 wxPython，pip 将会自动下载源码包并完成编译。
+
 ```bash
-pip install qrcode[pil]==7.4.2 requests==2.32.5 python-vlc==3.0.21203 protobuf==6.32.0 websockets==15.0.1 pycryptodome==3.23.0
+pip3 install wxPython
+```
+
+编译完成后再安装其他依赖：
+
+```bash
+pip3 install -r requirements.txt
 ```
 
 ### 安装 FFmpeg
-程序依赖 FFmpeg 实现音视频合成，格式转换，直播录制等功能，缺少时将影响正常使用。  
+程序依赖 FFmpeg 实现音视频合并，格式转换，直播录制等功能，缺少时将影响正常使用。  
 
-有关 FFmpeg 的安装，请参考[下一页](https://bili23.scott-sloan.cn/doc/install/ffmpeg.html)内容。  
+有关 FFmpeg 的安装，请参考[下一页](/doc/install/ffmpeg.html)内容。  
 
 :::tip
-若使用的是编译版，无需再次安装。
+Windows 发行版已附带 FFmpeg，无需再次安装。
 :::
 
 ### 运行程序
-直接运行 main.py 即可打开程序：
+直接运行 src 目录下的入口文件 main.py 即可。
 
 ```bash
 cd src
 python3 main.py
 ```
-
-## 编译版使用
-运行 `Bili23.exe`，即可开始使用。 
-
-:::tip
-如提示缺少 Microsoft Visual C++ 运行库，请前往[此处](https://aka.ms/vs/17/release/vc_redist.x64.exe)下载。
-:::

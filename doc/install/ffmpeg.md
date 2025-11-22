@@ -1,18 +1,23 @@
 # 安装 FFmpeg
-程序依赖 FFmpeg 实现音视频合成，格式转换，直播录制等功能，缺少时将影响正常使用。
+程序依赖 FFmpeg 实现音视频合并，格式转换，直播录制等功能，缺少时将影响正常使用。
 
 :::tip
-若使用的是附带 FFmpeg 的编译版，无需再次安装。
+Windows 发行版已附带 FFmpeg，无需再次安装。
 :::
 
 ## Windows 
-Windows 用户需手动下载，并创建环境变量。
+Windows 用户可从下方直接下载编译版本：
 
 [官网下载](https://ffmpeg.org/)  
 [蓝奏云](https://wwx.lanzout.com/iMJkM2oup3mh) 密码：dnn9（来源于：gyan.dev，版本：7.1）
 
-## Linux
-### 方式一：包管理器安装
+:::info
+Windows 也可手动编译 FFmpeg，具体方法请参考博客文章[Windows 平台下使用 MSYS 2 编译 FFmpeg](https://www.scott-sloan.cn/archives/449/)。
+:::
+
+## Linux 包管理器安装
+通过包管理器安装 FFmpeg，操作简单，但安装的版本可能不是最新版本。如果需要最新版本，请参考下方编译安装方式手动编译。
+
 对于基于 Debain 的系统，在终端中执行以下命令：
 ```bash
 sudo apt update
@@ -34,34 +39,69 @@ sudo yum install ffmpeg
 sudo pacman -S ffmpeg
 ```
 
-### 方式二：编译安装
-编译安装较为繁琐，具体方法请自行查找。
+## Linux & macOS 编译安装 {build}
+如需安装最新版本或自定义编译参数，可选择源码编译安装。主要步骤如下：
 
-## macOS
-### 方式一：使用 Homebrew 安装
-如果没有安装 Homebrew，执行下面的命令安装：
+### 安装依赖
+以 Ubuntu 为例，执行下面的命令：
+
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+sudo apt update
+sudo apt install -y git build-essential pkg-config yasm nasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev
 ```
 
-随后在终端中执行以下命令：
+macOS 用户可使用 Homebrew 安装依赖：
 ```bash
-brew install ffmpeg
+brew install git yasm nasm x264 x265 libvpx fdk-aac lame opus
 ```
 
-### 方式二：使用静态编译文件（不适用于 ARM64）
-打开[FFmpeg 官网](https://ffmpeg.org/)，进入 macOS 下载页。
+### 克隆 FFmpeg 源码：
+```bash
+git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+cd ffmpeg
+```
 
-[![pEl2BCj.png](https://s21.ax1x.com/2025/02/23/pEl2BCj.png)](https://imgse.com/i/pEl2BCj)
+### 配置编译参数
+以下参数配置与 Windows 发行版附带的 FFmpeg 相同，用户也可以根据实际的需要调整参数配置。
+注意还需手动编译安装 libmp3lame，并将 `--extra-cflags` 和 `--extra-ldflags` 路径修改为实际安装目录。
 
-下载压缩包。
+```bash
+export ARCH=x86_64
 
-[![pEl25G9.png](https://s21.ax1x.com/2025/02/23/pEl25G9.png)](https://imgse.com/i/pEl25G9)
+./configure \
+--prefix=./ffmpeg-build \
+--disable-doc \
+--disable-shared \
+--disable-everything \
+--disable-programs \
+--disable-swscale \
+--disable-filters \
+--disable-swresample \
+--disable-avx512 \
+--disable-network \
+--disable-avdevice \
+--disable-autodetect \
+--enable-demuxer='concat,ffmetadata,mov,mp4,flv,m4a,mp3,m4a' \
+--enable-muxer='mp4,flv,mp3,m4a,flac' \
+--enable-decoder='h264,hevc,av1,aac,flac,eac3,ac3' \
+--enable-encoder='libmp3lame,flac' \
+--enable-static \
+--enable-small \
+--enable-ffmpeg \
+--enable-protocol='file,concat' \
+--enable-libmp3lame \
+--enable-gpl \
+--extra-ldflags="-L/path/to/libmp3lame/lame-3.100/build/lib -static -static-libgcc -static-libstdc++" \
+--extra-cflags="-I/path/to/libmp3lame/lame-3.100/build/include" \
+```
 
-解压后得到可执行文件，创建环境变量即可。
+### 编译并安装：
+```bash
+make -j$(nproc)
+sudo make install
+```
 
-### 方式三：编译安装
-编译安装较为繁琐，具体方法请自行查找。
+编译完成后，可通过 `ffmpeg -version` 验证安装。
 
 ## 创建环境变量
 ### Windows
