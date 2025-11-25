@@ -33,7 +33,7 @@ jobs:
           CLOUDREVE_PASSWORD: ${{ secrets.CLOUDREVE_PASSWORD }}
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
-          python3 ./github_api.py
+          python3 ./api.py
 
       - uses: actions/setup-node@v4
         with:

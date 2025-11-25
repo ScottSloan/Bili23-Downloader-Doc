@@ -37,6 +37,6 @@
         "onedrive_url": "",
         "lanzou_url": "",
         "sha256": "",
-        "enable": false
+        "enable": true
     }
 ]

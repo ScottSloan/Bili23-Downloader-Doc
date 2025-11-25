@@ -55,7 +55,7 @@ macOS 用户可使用 Homebrew 安装依赖：
 brew install git yasm nasm x264 x265 libvpx fdk-aac lame opus
 ```
 
-### 克隆 FFmpeg 源码：
+### 克隆 FFmpeg 源码
 ```bash
 git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
 cd ffmpeg
@@ -95,7 +95,7 @@ export ARCH=x86_64
 --extra-cflags="-I/path/to/libmp3lame/lame-3.100/build/include" \
 ```
 
-### 编译并安装：
+### 编译并安装
 ```bash
 make -j$(nproc)
 sudo make install

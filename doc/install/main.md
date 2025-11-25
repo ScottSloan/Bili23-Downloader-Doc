@@ -91,17 +91,17 @@ Windows 用户请先确保安装 Microsoft Visual C++ 2015-2022 运行库，[点
 ::: details 查看校验方法
 #### Windows
 ```bash
-certutil -hashfile <file> SHA256
+certutil -hashfile file_name SHA256
 ```
 
 #### Linux
 ```bash
-sha256sum <file>
+sha256sum file_name
 ```
 
 #### macOS
 ```bash
-shasum -a 256 <file>
+shasum -a 256 file_name
 ```
 :::
 

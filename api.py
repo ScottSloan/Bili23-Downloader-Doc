@@ -81,6 +81,17 @@ class GitHubAPI:
 
         self.cloudreve = CloudreveAPI(cloudreve_api, cloudreve_email, cloudreve_password, version)
 
+        url_dict = {}
+
+        for entry in resp_json.get("assets"):
+            name = entry.get("name")
+
+            url_dict[name] = {
+                "channel": self.get_channel(name),
+                "sha256": entry.get("digest").removeprefix("sha256:"),
+                "url": self.cloudreve.query_file_direct_link(name)
+            }
+
         sha256_dict = {entry.get("name"): entry.get("digest").removeprefix("sha256:") for entry in resp_json.get("assets")}
 
         self.update_project_json(version)
@@ -94,7 +105,7 @@ class GitHubAPI:
 
             f.write(json.dumps(data, ensure_ascii = False, indent = 4))
 
-    def update_download_table_json(self, version: str, sha256_dict: dict):
+    def update_download_table_json(self, version: str, url_dict: dict):
         with open("download_table.json", "r", encoding = "utf-8") as f:
             download_table = json.loads(f.read())
 
@@ -102,9 +113,11 @@ class GitHubAPI:
             for entry in download_table:
                 name = entry.get("name").replace("{version}", version)
 
-                if name in sha256_dict.keys():
-                    entry["sha256"] = sha256_dict.get(name)
-                    entry["onedrive_url"] = self.cloudreve.query_file_direct_link(name)
+                if name in url_dict.keys():
+                    value = url_dict.get(name)
+
+                    entry["sha256"] = value.get("sha256")
+                    entry["onedrive_url"] = value.get("url")
 
             f.write(json.dumps(download_table, ensure_ascii = False, indent = 4))
 
@@ -112,6 +125,17 @@ class GitHubAPI:
         release_info = self.get_latest_release()
 
         self.save_project_info(release_info)
+
+    def get_channel(self, name: str):
+        channel_dict = {
+            "windows-x64.zip": "windows_portable",
+            "windows-x64-setup.exe": "windows_setup",
+            "linux-amd64.deb": "linux_deb_package"
+        }
+
+        for key, value in channel_dict.items():
+            if name.endswith(key):
+                return value
 
 if __name__ == "__main__":
     github_token = os.getenv("ACCESS_TOKEN")
