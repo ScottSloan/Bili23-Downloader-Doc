@@ -15,17 +15,17 @@
         "comment": "Windows 便携版",
         "github_url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v{version}/Bili23_Downloader-{version}-windows-x64.zip",
         "onedrive_url": "",
-        "lanzou_url": "https://wwx.lanzout.com/iK6Mn39mdeif",
+        "lanzou_url": "",
         "sha256": "",
         "enable": true
     },
     {
         "name": "Bili23_Downloader-{version}-windows-x64-setup.exe",
         "platform": "Windows x64",
-        "comment": "Windows 独立安装程序，蓝奏云密码：5c1b",
+        "comment": "Windows 独立安装程序",
         "github_url": "https://github.com/ScottSloan/Bili23-Downloader/releases/download/v{version}/Bili23_Downloader-{version}-windows-x64-setup.exe",
         "onedrive_url": "",
-        "lanzou_url": "https://wwx.lanzout.com/igDju39mdafi",
+        "lanzou_url": "",
         "sha256": "",
         "enable": true
     },
