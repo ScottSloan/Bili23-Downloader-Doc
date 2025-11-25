@@ -92,10 +92,8 @@ class GitHubAPI:
                 "url": self.cloudreve.query_file_direct_link(name)
             }
 
-        sha256_dict = {entry.get("name"): entry.get("digest").removeprefix("sha256:") for entry in resp_json.get("assets")}
-
         self.update_project_json(version)
-        self.update_download_table_json(version, sha256_dict)
+        self.update_download_table_json(version, url_dict)
 
     def update_project_json(self, version: str):
         with open("project.json", "w", encoding = "utf-8") as f:
