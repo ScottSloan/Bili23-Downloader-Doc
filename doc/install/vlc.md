@@ -7,7 +7,7 @@
 ## 方式一
 前往[VLC 官网](https://www.videolan.org/vlc/)，根据操作系统选择对应的安装包，安装 VLC Media Player。
 
-<img src="https://s21.ax1x.com/2025/06/12/pVkILE8.png" alt="VLC官网" style="width: 90%;">
+<img src="https://bili23.scott-sloan.cn/1764928108.png" alt="VLC官网" style="width: 90%;">
 
 ## 方式二
 **此方式仅 Windows 用户可用**
@@ -21,7 +21,7 @@
 ### 步骤 2
 将下载的 `vlc_media_player.zip` 文件解压，得到一个 `vlc` 文件夹。
 
-<img src="https://s21.ax1x.com/2025/06/12/pVko1UO.png" alt="解压" style="width: 90%;">
+<img src="https://bili23.scott-sloan.cn/1764928199.png" alt="解压" style="width: 90%;">
 
 :::warning 重要提示
 如果得到的是 `vlc_media_player` 文件夹，请进入此文件夹，找到并提取其中的 `vlc` 文件夹 。
@@ -30,7 +30,7 @@
 ### 步骤 3
 将解压得到的 `vlc` 文件夹完整移动到程序的运行目录（与 `GUI.exe` 同一级目录）下。
 
-<img src="https://s21.ax1x.com/2025/06/12/pVko62j.png" alt="解压" style="width: 90%;">
+<img src="https://bili23.scott-sloan.cn/1764928213.png" alt="解压" style="width: 90%;">
 
 ### 步骤 4
 **重启程序（非常重要）**，打开`视频工具箱`验证是否安装成功，如果仍然提示未安装，请再仔细检查一遍上述的步骤是否操作正确。

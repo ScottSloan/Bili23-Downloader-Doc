@@ -63,11 +63,9 @@ cd ffmpeg
 
 ### 配置编译参数
 以下参数配置与 Windows 发行版附带的 FFmpeg 相同，用户也可以根据实际的需要调整参数配置。
-注意还需手动编译安装 libmp3lame，并将 `--extra-cflags` 和 `--extra-ldflags` 路径修改为实际安装目录。
+注意还需手动编译安装 `libmp3lame`，并将 `--extra-cflags` 和 `--extra-ldflags` 路径修改为实际安装目录。
 
 ```bash
-export ARCH=x86_64
-
 ./configure \
 --prefix=./ffmpeg-build \
 --disable-doc \
@@ -95,9 +93,13 @@ export ARCH=x86_64
 --extra-cflags="-I/path/to/libmp3lame/lame-3.100/build/include" \
 ```
 
+:::tip
+libmp3lame 详细编译步骤请参考[博客文章](https://www.scott-sloan.cn/archives/449/)。
+:::
+
 ### 编译并安装
 ```bash
-make -j$(nproc)
+make -j8
 sudo make install
 ```
 
@@ -109,22 +111,22 @@ sudo make install
 
 右键`此电脑`，点击`属性`，在设置中点击`高级系统设置`。
 
-[![pElcRyV.png](https://s21.ax1x.com/2025/02/23/pElcRyV.png)](https://imgse.com/i/pElcRyV)
+<img src="https://bili23.scott-sloan.cn/1764927728.png">
 
 点击`环境变量`。
 
-[![pElcLy6.png](https://s21.ax1x.com/2025/02/23/pElcLy6.png)](https://imgse.com/i/pElcLy6)
+<img src="https://bili23.scott-sloan.cn/1764927887.png">
 
 在`系统变量`一栏中找到`Path`并选中，点击`编辑`。
 
-[![pElgMpn.png](https://s21.ax1x.com/2025/02/23/pElgMpn.png)](https://imgse.com/i/pElgMpn)
+<img src="https://bili23.scott-sloan.cn/1764927925.png">
 
 点击`新建`，填入`ffmpeg.exe`所在的文件夹（例如：`D:/Software/ffmpeg/bin`）即可。
 
-[![pElgUh9.png](https://s21.ax1x.com/2025/02/23/pElgUh9.png)](https://imgse.com/i/pElgUh9)
+<img src="https://bili23.scott-sloan.cn/1764927951.png">
 
-[![pElgBX6.png](https://s21.ax1x.com/2025/02/23/pElgBX6.png)](https://imgse.com/i/pElgBX6)
+<img src="https://bili23.scott-sloan.cn/1764927971.png">
 
 最后，在终端中运行`ffmpeg`测试环境变量是否创建成功。
 
-[![pEl2pHU.png](https://s21.ax1x.com/2025/02/23/pEl2pHU.png)](https://imgse.com/i/pEl2pHU)
+<img src="https://bili23.scott-sloan.cn/1764928001.png">

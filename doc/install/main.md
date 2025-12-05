@@ -116,6 +116,8 @@ Python 版本需要为 3.10 及以上。
 
 安装时注意勾选`Add python.exe to PATH`，创建环境变量。  
 
+<img src="https://bili23.scott-sloan.cn/1764928315.png">
+
 [![pElIuQJ.png](https://s21.ax1x.com/2025/02/23/pElIuQJ.png)](https://imgse.com/i/pElIuQJ)
 
 安装完成后，建议执行下面的命令更换 pip 源为清华源，加快 pip 包下载速度：
