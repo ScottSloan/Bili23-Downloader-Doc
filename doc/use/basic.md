@@ -12,26 +12,26 @@
 :::details 点击查看如何找到设置窗口
 ### Windows
 
-<img src="https://s21.ax1x.com/2025/06/19/pVVG6pj.png" alt="Windows">
+<img src="https://bili23.scott-sloan.cn/1764924052.png" alt="Windows">
 
 *图 0.1 Windows：在窗口标题栏下方的菜单栏中找到并点击`工具`->`设置`*
 
 ### Linux
 
-<img src="https://s21.ax1x.com/2025/06/19/pVVGXB6.png" alt="Linux">
+<img src="https://bili23.scott-sloan.cn/1764924079.png" alt="Linux">
 
 *图 0.2 Linux：在窗口标题栏下方的菜单栏中找到并点击`工具`->`设置`*
 
 ### macOS
 
-<img src="https://s21.ax1x.com/2025/06/19/pVVGgcn.png" alt="macOS">
+<img src="https://bili23.scott-sloan.cn/1764924092.png" alt="macOS">
 
 *图 0.3 macOS：在屏幕顶部的菜单栏中找到并点击`工具`->`设置`*
 :::
 
 在链接输入框中输入 URL 后（点击[此处](/doc/use/url.html)查看支持解析的 URL），点击`Get`按钮开始解析。解析完成后，将显示剧集列表，如下图所示：
 
-<img src="https://s21.ax1x.com/2025/08/28/pV6dHER.png" alt="剧集列表">
+<img src="https://bili23.scott-sloan.cn/1764923687.png" alt="剧集列表">
 
 *图1 剧集列表示意图*
 
@@ -46,7 +46,7 @@
 ### 修改剧集列表显示方式
 点击右上角的`列表图标`可切换剧集列表的显示方式。  
 
-<img src="https://s21.ax1x.com/2025/08/12/pVdIMnO.png" alt="剧集列表显示方式">
+<img src="https://bili23.scott-sloan.cn/1764923838.png" alt="剧集列表显示方式">
 
 *图2 剧集列表显示方式示意图*
 
@@ -59,7 +59,7 @@
 ### 自定义下载设置
 点击右上角的`齿轮图标`可设置视频清晰度、音质等参数。
 
-<img src="https://s21.ax1x.com/2025/10/21/pVOtG36.png" alt="自定义下载设置">
+<img src="https://bili23.scott-sloan.cn/1764923891.png" alt="自定义下载设置">
 
 *图3 自定义下载设置示意图*
 
@@ -79,7 +79,7 @@
 ### 右键菜单
 在剧集列表中点击鼠标右键，可执行如下图所示的多种操作。
 
-<img src="https://s21.ax1x.com/2025/10/21/pVOtJgK.png" alt="右键菜单">
+<img src="https://bili23.scott-sloan.cn/1764923951.png" alt="右键菜单">
 
 *图4 右键菜单示意图*
 
@@ -90,14 +90,14 @@
 ### 搜索剧集列表
 点击右上角`搜索图标`可对剧集列表进行搜索。
 
-<img src="https://s21.ax1x.com/2025/08/28/pV6cNUe.png" alt="搜索剧集列表">
+<img src="https://bili23.scott-sloan.cn/1764923981.png" alt="搜索剧集列表">
 
 *图5 搜索剧集列表示意图*
 
 ## 下载管理窗口
 点击底部的`下载管理`按钮进入下载管理界面。
 
-<img src="https://s21.ax1x.com/2025/03/21/pE09udS.png" alt="下载管理">
+<img src="https://bili23.scott-sloan.cn/1764924013.png" alt="下载管理">
 
 *图6 下载管理示意图*
 
