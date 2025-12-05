@@ -1,7 +1,7 @@
 # 替换音视频流 CDN 节点
 由于哔哩哔哩（B 站）默认分配的 CDN 线路可能存在稳定性问题，导致音视频流下载失败，建议开启`替换音视频流 CDN 节点`功能。该功能会根据您设置的优先级顺序，自动选择可用的 CDN 节点，以提升访问速度和成功率。
 
-<img src="https://s21.ax1x.com/2025/06/11/pVkQ5QO.png" alt="自定义 CDN 节点" style="width: 90%;">
+<img src="https://bili23.scott-sloan.cn/1764925883.png" alt="自定义 CDN 节点" style="width: 90%;">
 
 *图1 自定义 CDN 节点示意图*
 

@@ -1,7 +1,9 @@
 # 使用代理
 在设置中切换到`代理`选项卡进行相关设置。
 
-<img src="https://s21.ax1x.com/2025/02/23/pElRGi4.png" alt="pElRGi4.png" style="width: 50%;">
+<img src="https://bili23.scott-sloan.cn/1764924882.png" style="width: 50%;">
+
+*图1 代理设置示意图*
 
 如果代理需要进行身份验证，开启`启用代理身份验证`即可。
 

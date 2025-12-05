@@ -1,7 +1,7 @@
 # 查看互动视频剧情树
 **最低支持版本：1.62.0**
 
-<img src="https://s21.ax1x.com/2025/05/15/pEjqbI1.png" alt="互动视频剧情树" style="width: 90%;"/>
+<img src="https://bili23.scott-sloan.cn/1764926018.png" alt="互动视频剧情树" style="width: 90%;"/>
 
 *图1 互动视频剧情树示意图*
 

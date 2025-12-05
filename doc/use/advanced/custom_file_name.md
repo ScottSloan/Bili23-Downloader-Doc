@@ -1,7 +1,7 @@
 # 自定义下载文件名&自动分类
 **最低支持版本：1.63.0**
 
-<img src="https://s21.ax1x.com/2025/10/21/pVOtKHJ.png" alt="自定义下载文件名">
+<img src="https://bili23.scott-sloan.cn/1764926609.png" alt="自定义下载文件名">
 
 *图1 自定义下载文件名对话框示意图*
 
@@ -11,7 +11,7 @@
 对于收藏夹、个人主页和热榜，程序会自动识别其中的视频类型，按照相应的模板命名。
 :::
 
-<img src="https://s21.ax1x.com/2025/08/28/pV6geMt.png" alt="编辑模板">
+<img src="https://bili23.scott-sloan.cn/1764926641.png" alt="编辑模板">
 
 *图2 编辑模板示意图*
 
@@ -44,7 +44,7 @@
 
 对于**分P视频**，提供**分P总标题**（`{part_title}`）和**分P序号**（`{page}`）字段，如图 3 所示。
 
-<img src="https://s21.ax1x.com/2025/08/29/pV6oO0A.jpg" alt="分P视频">
+<img src="https://bili23.scott-sloan.cn/1764926680.jpg" alt="分P视频">
 
 *图3 分P视频示意图*
 
@@ -54,13 +54,13 @@
 对于**合集视频**，提供**合集标题**（`{collection_title}`）、**章节标题**（`{section_title}`）和**分节标题**（`{part_title}`）字段。  
 部分合集视频可能会包含章节和分节部分，如图 4 所示。
 
-<img src="https://s21.ax1x.com/2025/09/02/pVgFxB9.png" alt="合集视频">
+<img src="https://bili23.scott-sloan.cn/1764926718.png" alt="合集视频">
 
 *图4 合集视频示意图*
 
 但也可能都不包含，如图 5 所示。
 
-<img src="https://s21.ax1x.com/2025/08/29/pV6T64P.png" alt="合集视频">
+<img src="https://bili23.scott-sloan.cn/1764926741.png" alt="合集视频">
 
 *图5 合集视频示意图*
 
@@ -69,11 +69,11 @@
 
 对于**剧集**，提供**剧集标题**（`{series_title}`）、**章节标题**（`{section_title}`）、**标识**（`{badge}`）和**剧集编号**（`{episode_num}`）字段，如图 6、7 所示。  
 
-<img src="https://s21.ax1x.com/2025/08/29/pV6ToEn.png" alt="剧集">
+<img src="https://bili23.scott-sloan.cn/1764926773.png" alt="剧集">
 
 *图6* 剧集标题示意图
 
-<img src="https://s21.ax1x.com/2025/09/02/pVgFI7n.jpg" alt="剧集">
+<img src="https://bili23.scott-sloan.cn/1764926790.jpg" alt="剧集">
 
 *图7* 剧集示意图
 
@@ -82,7 +82,7 @@
 
 对于**课程**，提供**课程标题**（`{series_title}`）、**章节标题**（`{section_title}`）和**标识**（`{badge}`）字段，如图 8 所示。
 
-<img src="https://s21.ax1x.com/2025/09/02/pVgKvRA.png" alt="课程">
+<img src="https://bili23.scott-sloan.cn/1764926808.png" alt="课程">
 
 *图8* 课程示意图
 
