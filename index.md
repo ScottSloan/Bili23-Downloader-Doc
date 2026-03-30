@@ -1,17 +1,18 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Bili23 Downloader"
   text: "跨平台的 B 站视频下载工具"
-  tagline: 支持 Windows、Linux、MacOS 三平台，下载 B 站视频/番剧/电影/纪录片 等资源
+  tagline: 支持现代 UI、音视频流分离下载、多线程下载、弹幕与字幕获取、封面提取及元数据刮削，可自定义文件命名与分类，兼容 Windows（含 Win7）、Linux 和 macOS 系统。
   actions:
     - theme: brand
-      text: 下载安装
-      link: /doc/install/main
+      text: 下载地址
+      link: /doc/releases
     - theme: alt
       text: 项目文档
-      link: /doc/what-is-bili23-downloader
+      link: /doc/introduction
     - theme: alt
       text: 开源地址
       link: https://github.com/ScottSloan/Bili23-Downloader
@@ -33,3 +34,4 @@ features:
     --vp-home-hero-image-background-image: radial-gradient(#ffffff 40%, #3cb2ff 80%, #ffffff 90%);
 }
 </style>
+

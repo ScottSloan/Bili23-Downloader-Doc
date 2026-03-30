@@ -6,9 +6,6 @@ on:
       - 'main'
 
   workflow_dispatch:
-
-  repository_dispatch:
-    types: [deploy-pages]
   
 permissions:
   contents: read
@@ -25,15 +22,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Update project info
-        env:
-          CLOUDREVE_API: ${{ secrets.CLOUDREVE_API }}
-          CLOUDREVE_EMAIL: ${{ secrets.CLOUDREVE_EMAIL }}
-          CLOUDREVE_PASSWORD: ${{ secrets.CLOUDREVE_PASSWORD }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: |
-          python3 ./api.py
 
       - uses: actions/setup-node@v4
         with:
