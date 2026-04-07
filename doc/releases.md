@@ -26,6 +26,11 @@ let macos_x86_64_url = formatURL('macos_x86_64.dmg')
 
 完整更新日志请前往 <a :href="release_url" target="_blank">GitHub 发布页</a> 查看。
 
+::: danger 🛑 安全下载提示与免责声明
+强烈建议**仅通过下方提供的官方 GitHub 链接**下载本软件。
+从第三方网站、网盘论坛或他人私下分享渠道获取的安装包，**极有可能被二次篡改或植入病毒/木马**。对于因下载、运行非官方渠道安装包所导致的任何设备损坏、隐私泄露或财产损失，开发者**概不负责**。
+:::
+
 ## Windows
 
 ::: tip 💡 推荐选择
@@ -59,9 +64,11 @@ glibc 版本须为 2.27 及以上，即 Ubuntu 18.04 / Debian 10 及以上版本
 
 ## macOS
 ::: warning ⚠️ macOS 用户注意
-最低支持 macOS 12.0 Monterey 版本，请根据你的 Mac 电脑处理器类型（Apple 芯片或 Intel 芯片）选择对应的安装包。
+**最低系统版本要求**：
+- **苹果 M 系列芯片**：macOS 11.0 (Big Sur) 及以上
+- **英特尔 (Intel) 芯片**：macOS 10.15 (Catalina) 及以上
 
-如果你遇到了安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
+请根据你的 Mac 电脑处理器类型选择对应的安装包。如果你遇到了安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
 :::
 
 | 芯片类型 | 文件类型 | 说明 | 下载链接 |

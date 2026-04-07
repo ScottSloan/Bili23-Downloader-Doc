@@ -36,6 +36,9 @@
 | `{number}` | 解析列表中的编号 | 1 |
 | `{uploader}` | UP 主昵称 | 哔哩哔哩番剧 |
 | `{uploader_uid}` | UP 主 UID | 12345678 |
+| `{video_quality}` | 画质 | 1080P |
+| `{audio_quality}` | 音质 | 192K |
+| `{video_codec}` | 编码 | HEVC |
 | `{aid}` | av 号 | av12345678 |
 | `{bvid}` | BV 号 | BV1xxxxxx |
 | `{cid}` | cid | 12345678 |
