@@ -36,7 +36,7 @@
 <img src="./pic/custom_codec_priority.png" alt="自定义编码优先级设置">
 :::
 
-## Windows 7 用户常见问题
+## Windows 用户常见问题
 
 ::: details 我是 Windows 7 用户，为什么无法运行程序？
 <img src="./pic/win7_error.png" alt="Windows 7 运行错误">
@@ -49,6 +49,16 @@
 
 因为 Windows 7 的 DPI 缩放机制与现代 Windows 10/11 不兼容，导致程序无法正确识别当前的显示缩放比例，从而界面元素过小且字体模糊。  
 **解决方法**：请在程序设置中调整显示缩放比例。
+:::
+
+## Linux 用户常见问题
+::: details 我是 Ubuntu 用户，为什么在跳转打开浏览器提示找不到文件？
+
+<img src="./pic/ubuntu_page_not_found_error.png" alt="Ubuntu 页面未找到错误">
+
+这是由于 Ubuntu 系统默认的 Firefox 浏览器为 Snap 版本，存在沙箱权限限制，导致无法访问 /tmp 临时目录中的文件。  
+
+**解决方法**：请卸载 Snap 版本的 Firefox 浏览器，改用官方提供的 DEB 包版本，或使用其他非 Snap 版本的浏览器（如 Chromium）。
 :::
 
 ## macOS 用户常见问题
