@@ -12,6 +12,6 @@
 
 除日常的代码维护外，处理复杂环境以及重构发布都耗费了大量的时间与精力。如果软件确实帮到了你的大忙，你也可以选择通过下方赞助码请我喝杯咖啡。**这也是对为爱发电最实在的认可！**
 
-<div align="center">
-  <img src="./pic/sponsor.png" alt="赞助二维码" style="width: 300px; margin: 10px 0; border-radius: 8px;">
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+  <img src="./pic/sponsor_weixin.png" alt="微信赞助二维码" style="width: 300px; margin: 10px 0; border-radius: 8px;">
 </div>

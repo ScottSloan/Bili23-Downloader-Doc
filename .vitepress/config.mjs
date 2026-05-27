@@ -30,7 +30,14 @@ export default defineConfig({
         items: [
           { text: '基础使用', link: '/doc/basic-usage' },
           { text: '常见问题 (FAQ)', link: '/doc/faq' },
-          { text: '进阶：自定义命名与归类', link: '/doc/advanced-usage' }
+          {
+            text: '进阶使用',
+            collapsed: true,
+            items: [
+              { text: '自定义命名与归类', link: '/doc/naming-rule' },
+              { text: '自动解析分页', link: '/doc/auto-parse-page' },
+            ]
+          }
         ]
       },
       {
