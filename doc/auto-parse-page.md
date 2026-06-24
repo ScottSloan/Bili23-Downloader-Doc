@@ -3,11 +3,13 @@
 当你解析收藏夹、个人空间、历史记录、稍后再看等分页类型链接时，可以启用自动解析分页功能。它支持一键解析全部分页，也支持只解析指定的页码范围，适合批量下载场景。
 
 ## 触发入口
+
 该功能入口如图所示，位于底部分页组件右侧，点击"···"按钮将弹出菜单，选择"自动解析分页"即可进入。
-<img src="./pic/auto_parse_page_trigger_entry.png" alt="触发入口示意图">
+![触发入口示意图](./pic/auto_parse_page_trigger_entry.png)
 
 ## 功能说明
-<img src="./pic/auto_parse_page.png" alt="自动解析分页示意图">
+
+![自动解析分页示意图](./pic/auto_parse_page.png)
 
 结合图中的选项，你可以按需控制以下行为：
 

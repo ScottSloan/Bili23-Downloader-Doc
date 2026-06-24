@@ -1,4 +1,3 @@
-
 # 常见问题
 
 ## 下载问题
@@ -19,31 +18,33 @@
 
 ::: details 为什么不能下载已购买课程，或电影/纪录片没有 4K 画质？
 即使你已经购买或拥有大会员，部分受严格版权保护的商业内容（如课程、电影、纪录片）会受到 **DRM（数字版权管理）加固保护**。
+
 - **电影/纪录片**：受 DRM 保护的内容通常最高只能下载未加密的 **1080P** 画质版本。
 - **付费课程**：绝大部分均受完整 DRM 保护，因此**完全无法下载**。
-:::
+  :::
 
 ::: details 为什么会提示解析失败（412 Precondition Failed）？
 这是由于你在短时间内频繁发起解析或下载请求，触发了 B 站的风控拦截机制。
 **解决方法**：
+
 - **等待解除**：暂停使用软件，等待一段时间（通常几个小时至半天）风控会自动解除。
 - **更换网络**：如果急需下载，可以尝试重启路由器以更换 IP，或者连接手机热点网络再试。
-:::
+  :::
 
 ::: details 为什么下载的视频无法播放，或者只有声音没有画面？
 这通常是因为视频采用了较高压缩率的 **AV1** 或 **HEVC (H.265)** 编码格式，而你电脑系统自带的基础播放器缺少相应的解码器导致无法显示画面。
 
 **解决方法**（任选其一均可）：
-- **方法一（推荐）**：使用支持全格式解码的专业播放器，例如 [PotPlayer](https://potplayer.daum.net/) 或 [VLC](https://www.videolan.org/)。
+
+- **方法一（推荐）**：使用支持全格式解码的专业播放器，例如 [PotPlayer](https://potplayer.tv/) 或 [VLC](https://www.videolan.org/)。
 - **方法二**：在程序设置中，将兼容性最广的 **AVC (H.264)** 拖拽到列表顶部，然后重新下载该视频。
 
-<img src="./pic/custom_codec_priority.png" alt="自定义编码优先级设置">
+![自定义编码优先级设置](./pic/custom_codec_priority.png)
 :::
 
 ::: details 为什么下载的视频外面还有一层文件夹？为什么下载的视频顺序是乱的？
 这是因为程序使用了预设的命名规则，你可以在设置中按个人喜好修改命名规则。  
-
-<img src="./pic/custom_naming_rule.png" alt="自定义命名规则设置">
+![自定义命名规则设置](./pic/custom_naming_rule.png)
 
 有关命名规则的详细说明请参考 [自定义命名与归类](./naming-rule) 一节。
 
@@ -56,7 +57,7 @@
 ## Windows 用户常见问题
 
 ::: details 我是 Windows 7 用户，为什么无法运行程序？
-<img src="./pic/win7_error.png" alt="Windows 7 运行错误">
+![Windows 7 运行错误](./pic/win7_error.png)
 
 请到 [下载发行版](/doc/releases.html) 页面，下载专门提供的 Windows 7 版本安装包进行安装。
 :::
@@ -69,11 +70,12 @@
 :::
 
 ## Linux 用户常见问题
+
 ::: details 我是 Ubuntu 用户，为什么在跳转打开浏览器提示找不到文件？
 
-<img src="./pic/ubuntu_page_not_found_error.png" alt="Ubuntu 页面未找到错误">
+![Ubuntu 页面未找到错误](./pic/ubuntu_page_not_found_error.png)
 
-这是由于 Ubuntu 系统默认的 Firefox 浏览器为 Snap 版本，存在沙箱权限限制，导致无法访问 /tmp 临时目录中的文件。  
+这是由于 Ubuntu 系统默认的 Firefox 浏览器为 Snap 版本，存在沙箱权限限制，导致无法访问 /tmp 临时目录中的文件。
 
 **解决方法**：请卸载 Snap 版本的 Firefox 浏览器，改用官方提供的 DEB 包版本，或使用其他非 Snap 版本的浏览器（如 Chromium）。
 :::
@@ -82,11 +84,11 @@
 
 ::: details 我是 macOS 用户，为什么提示 Apple 无法检查其是否包含恶意软件？
 
-<img src="./pic/macos_security_warning.jpg" alt="macOS 安全提示">
+![macOS 安全提示](./pic/macos_security_warning.jpg)
 
 这是由于软件没有进行 Apple 开发者的高级公证（Notarization），首次运行时会被系统的基础安全策略拦截。
 
 **解决方法**：  
-<img src="./pic/macos_security_solution_1.jpg" alt="macOS 安全提示解决方案步骤1">
-<img src="./pic/macos_security_solution_2.jpg" alt="macOS 安全提示解决方案步骤2">
+![macOS 安全提示解决方案步骤1](./pic/macos_security_solution_1.jpg)
+![macOS 安全提示解决方案步骤2](./pic/macos_security_solution_2.jpg)
 :::
