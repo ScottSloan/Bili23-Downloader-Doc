@@ -20,7 +20,7 @@ let windows_zip_type = 'windows_x64_portable.zip'
 let windows_zip_url = formatURL(windows_zip_type)
 let windows_zip_url_lanzou = formatLanzouURL(data.lanzou.windows_zip_key)
 
-// Windows 7
+// Windows 7 compatible
 let windows_7_exe_type = 'windows_x64_for_win7.exe'
 let windows_7_exe_url = formatURL(windows_7_exe_type)
 let windows_7_exe_url_lanzou = formatLanzouURL(data.lanzou.windows_7_exe_key)
@@ -72,21 +72,21 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 ## Windows
 
 ::: tip 💡 推荐选择
-推荐 Windows 10/11 用户优先选择 **exe 安装包**。
+推荐 Windows 10 1809 及以上版本以及 Windows 11 用户优先选择 **exe 安装包**。
 :::
 
 | 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Windows 10/11 (x64) | exe 安装包 | 标准安装程序（推荐） | <a :href="windows_exe_url" target="_blank">Github</a> <br> <a :href="windows_exe_url_lanzou" target="_blank">蓝奏云</a> |
-| Windows 10/11 (x64) | zip 便携版 | 免安装，解压即用 | <a :href="windows_zip_url" target="_blank">Github</a> <br> <a :href="windows_zip_url_lanzou" target="_blank">蓝奏云</a> |
+| Windows 10 1809 及以上 / Windows 11 (x64) | exe 安装包 | 标准安装程序（推荐） | <a :href="windows_exe_url" target="_blank">Github</a> <br> <a :href="windows_exe_url_lanzou" target="_blank">蓝奏云</a> |
+| Windows 10 1809 及以上 / Windows 11 (x64) | zip 便携版 | 免安装，解压即用 | <a :href="windows_zip_url" target="_blank">Github</a> <br> <a :href="windows_zip_url_lanzou" target="_blank">蓝奏云</a> |
 
-::: warning ⚠️ Windows 7 用户注意
-Windows 7 用户请**务必**选择下方专用版，否则无法运行。
+::: warning ⚠️ 旧版 Windows 用户注意
+低于 Windows 10 1809 的系统请**务必**选择下方的 Windows 7 兼容版，否则无法运行。
 :::
 
 | 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Windows 7 (x64) | exe 安装包 | Win7 专用安装程序 | <a :href="windows_7_exe_url" target="_blank">Github</a> <br> <a :href="windows_7_exe_url_lanzou" target="_blank">蓝奏云</a> |
+| 低于 Windows 10 1809 (x64) | exe 安装包 | Windows 7 兼容版安装程序 | <a :href="windows_7_exe_url" target="_blank">Github</a> <br> <a :href="windows_7_exe_url_lanzou" target="_blank">蓝奏云</a> |
 
 
 ## Linux
