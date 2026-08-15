@@ -6,6 +6,13 @@ export default defineConfig({
   description: "跨平台的 B 站视频下载工具，支持现代UI、音视频流分离下载、多线程下载、弹幕与字幕获取、封面提取及元数据刮削，可自定义文件命名与分类，兼容 Windows（含 Win7）、Linux 和 macOS。",
 
   lastUpdated: true,
+
+  // 进阶使用的子页面统一放在 doc/advanced/ 目录下，但访问地址仍保持 /doc/xxx.html
+  // 程序内的帮助链接（如命名规则页）为硬编码，旧版本无法更新，因此 URL 不能变动
+  rewrites: {
+    'doc/advanced/:page': 'doc/:page'
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -36,6 +43,7 @@ export default defineConfig({
             items: [
               { text: '自定义命名与归类', link: '/doc/naming-rule' },
               { text: '自动解析分页', link: '/doc/auto-parse-page' },
+              { text: '按关键词搜索', link: '/doc/keyword-search' },
             ]
           }
         ]

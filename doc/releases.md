@@ -60,78 +60,55 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 
 完整更新日志请前往 <a :href="release_url" target="_blank">GitHub 发布页</a> 查看。
 
-::: tip 💡 国内用户提示
-推荐国内用户优先选择蓝奏云或OneDrive链接下载。
-:::
-
 ::: danger 🛑 安全下载提示与免责声明
-强烈建议**仅通过下方提供的官方 GitHub 链接**下载本软件。
+强烈建议**仅通过本页提供的官方链接**下载本软件。
 从第三方网站、网盘论坛或他人私下分享渠道获取的安装包，**极有可能被二次篡改或植入病毒/木马**。对于因下载、运行非官方渠道安装包所导致的任何设备损坏、隐私泄露或财产损失，开发者**概不负责**。
 :::
 
 ## Windows
 
-::: tip 💡 推荐选择
-推荐 Windows 10 1809 及以上版本以及 Windows 11 用户优先选择 **exe 安装包**。
-:::
+**最低系统要求**：Windows 10 1809 (x64)，更低版本请选择 Windows 7 兼容版。
 
 | 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Windows 10 1809 及以上 / Windows 11 (x64) | exe 安装包 | 标准安装程序（推荐） | <a :href="windows_exe_url" target="_blank">Github</a> <br> <a :href="windows_exe_url_lanzou" target="_blank">蓝奏云</a> |
 | Windows 10 1809 及以上 / Windows 11 (x64) | zip 便携版 | 免安装，解压即用 | <a :href="windows_zip_url" target="_blank">Github</a> <br> <a :href="windows_zip_url_lanzou" target="_blank">蓝奏云</a> |
-
-::: warning ⚠️ 旧版 Windows 用户注意
-低于 Windows 10 1809 的系统请**务必**选择下方的 Windows 7 兼容版，否则无法运行。
-:::
-
-| 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
-| :--- | :--- | :--- | :--- |
 | 低于 Windows 10 1809 (x64) | exe 安装包 | Windows 7 兼容版安装程序 | <a :href="windows_7_exe_url" target="_blank">Github</a> <br> <a :href="windows_7_exe_url_lanzou" target="_blank">蓝奏云</a> |
 
-
 ## Linux
-::: warning ⚠️ Linux 用户注意
-如果你的系统版本低于要求的版本，请参考 [从源码安装](./manual-installation.md) 并根据文档指引降级依赖以运行本程序。
 
-请根据你的 Linux 发行版和系统架构选择对应的安装包。如果你不确定自己的系统架构，可以在终端输入 `uname -m` 来查看：
-- 输出 `x86_64` 表示你使用的是 amd64 架构
-- 输出 `aarch64` 或 `arm64` 表示你使用的是 arm64 架构
-:::
+不确定系统架构时，可在终端执行 `uname -m` 查看：输出 `x86_64` 为 amd64，输出 `aarch64` 或 `arm64` 为 arm64。
 
 ### AMD64 架构
-::: warning ⚠️ 注意
-**最低系统版本要求**：Ubuntu 20.04 / Debian 11 / Fedora 32 / RHEL 9 及以上 (glibc 2.31+)
-:::
+
+**最低系统要求**：Ubuntu 20.04 / Debian 11 / Fedora 32 / RHEL 9 (glibc 2.31+)
 
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> <br> <a :href="linux_amd64_deb_url_lanzou" target="_blank">蓝奏云</a> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_amd64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
 
-
 ### ARM64 架构
-::: warning ⚠️ 注意
-**最低系统版本要求**：Ubuntu 24.04 / Debian 13 / Fedora 40 / RHEL 10 及以上 (glibc 2.39+)
-:::
+
+**最低系统要求**：Ubuntu 24.04 / Debian 13 / Fedora 40 / RHEL 10 (glibc 2.39+)
 
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> <br> <a :href="linux_arm64_deb_url_lanzou" target="_blank">蓝奏云</a> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_arm64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
 
-
-
 ## macOS
-::: warning ⚠️ macOS 用户注意
-**最低系统版本要求**：macOS 12.0 (Monterey) 及以上。
- 
-如果你的系统版本低于要求的版本，请参考 [从源码安装](./manual-installation.md) 并根据文档指引降级依赖以运行本程序。
 
-请根据你的 Mac 电脑处理器类型选择对应的安装包。如果您遇到了安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
-:::
+**最低系统要求**：macOS 12.0 (Monterey)
 
 | 芯片类型 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | 苹果 M 系列芯片 (aarch64) | dmg 安装包 | 适用于 M1/M2/M3/M4 等新型号 | <a :href="macos_aarch64_url" target="_blank">Github</a> <br> <a :href="macos_aarch64_url_lanzou" target="_blank">蓝奏云</a> |
 | 英特尔芯片 (x86_64) | dmg 安装包 | 适用于旧款 Intel 芯片型号 | <a :href="macos_x86_64_url" target="_blank">Github</a> <br> <a :href="macos_x86_64_url_lanzou" target="_blank">蓝奏云</a> |
+
+遇到安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
+
+## 从源码安装
+
+如果你的系统版本低于上述最低要求，可参考 [从源码安装](./manual-installation.md)，按文档指引降级依赖后运行本程序。
 

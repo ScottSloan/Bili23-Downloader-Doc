@@ -45,7 +45,7 @@
 
 <img src="./pic/custom_naming_rule.png" alt="自定义命名规则设置">
 
-有关命名规则的详细说明请参考 [自定义命名与归类](./naming-rule) 一节。
+有关命名规则的详细说明请参考 [自定义命名与归类](/doc/naming-rule) 一节。
 
 :::
 
