@@ -42,6 +42,9 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: '自定义命名与归类', link: '/doc/naming-rule' },
+              { text: '画质、音质与编码优先级', link: '/doc/media-priority' },
+              { text: '弹幕、字幕与封面', link: '/doc/additional-content' },
+              { text: '媒体库刮削', link: '/doc/metadata-scraping' },
               { text: '自动解析分页', link: '/doc/auto-parse-page' },
               { text: '按关键词搜索', link: '/doc/keyword-search' },
             ]

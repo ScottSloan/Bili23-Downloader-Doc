@@ -38,12 +38,14 @@
 - **方法二**：在程序设置中，将兼容性最广的 **AVC (H.264)** 拖拽到列表顶部，然后重新下载该视频。
 
 <img src="./pic/custom_codec_priority.png" alt="自定义编码优先级设置">
+
+详细说明请参考 [画质、音质与编码优先级](/doc/media-priority)。
 :::
 
 ::: details 为什么下载的视频外面还有一层文件夹？为什么下载的视频顺序是乱的？
 这是因为程序使用了预设的命名规则，你可以在设置中按个人喜好修改命名规则。  
 
-<img src="./pic/custom_naming_rule.png" alt="自定义命名规则设置">
+<img src="./pic/naming_rule_trigger_entry.png" alt="自定义命名规则设置">
 
 有关命名规则的详细说明请参考 [自定义命名与归类](/doc/naming-rule) 一节。
 
@@ -84,7 +86,7 @@ B站的视频与音频是分离存储的，需要经 FFmpeg 合并才能得到�
 | 章节 | — | 是 |
 | 元数据 | nfo / json | 否 |
 
-嵌入到视频文件需要在合并阶段完成，因此必须同时开启「合并视频和音频」。
+嵌入到视频文件需要在合并阶段完成，因此必须同时开启「合并视频和音频」。弹幕与字幕还要求格式为 ASS 且输出容器为 MKV，详见 [弹幕、字幕与封面](/doc/additional-content)。
 :::
 
 ::: details 下载速度太慢 / 太快导致其他设备卡顿，怎么调整？
@@ -143,13 +145,6 @@ B站的视频与音频是分离存储的，需要经 FFmpeg 合并才能得到�
 <img src="./pic/win7_error.png" alt="Windows 7 运行错误">
 
 请到 [下载发行版](/doc/releases.html) 页面，下载专门提供的 Windows 7 版本安装包进行安装。
-:::
-
-::: details 为什么界面看起来太小了，字体模糊不清？
-<img src="./pic/adjust_display_scale.png" alt="调整显示缩放比例">
-
-因为 Windows 7 的 DPI 缩放机制与现代 Windows 10/11 不兼容，导致程序无法正确识别当前的显示缩放比例，从而界面元素过小且字体模糊。  
-**解决方法**：请在程序设置中调整显示缩放比例。
 :::
 
 ## Linux 用户常见问题
