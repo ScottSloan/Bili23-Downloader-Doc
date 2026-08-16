@@ -34,6 +34,15 @@ let linux_amd64_tar_gz_type = 'linux_amd64_portable.tar.gz'
 let linux_amd64_tar_gz_url = formatURL(linux_amd64_tar_gz_type)
 let linux_amd64_tar_gz_url_lanzou = formatLanzouURL(data.lanzou.linux_amd64_tar_gz_key)
 
+// rpm 与 AppImage 的文件名使用 GNU 架构名（x86_64 / aarch64），与 deb、tar.gz 的命名不同
+let linux_amd64_rpm_type = 'linux_x86_64.rpm'
+let linux_amd64_rpm_url = formatURL(linux_amd64_rpm_type)
+let linux_amd64_rpm_url_lanzou = formatLanzouURL(data.lanzou.linux_amd64_rpm_key)
+
+let linux_amd64_appimage_type = 'linux_x86_64.AppImage'
+let linux_amd64_appimage_url = formatURL(linux_amd64_appimage_type)
+let linux_amd64_appimage_url_lanzou = formatLanzouURL(data.lanzou.linux_amd64_appimage_key)
+
 // Linux ARM64
 let linux_arm64_deb_type = 'linux_arm64.deb'
 let linux_arm64_deb_url = formatURL(linux_arm64_deb_type)
@@ -42,6 +51,14 @@ let linux_arm64_deb_url_lanzou = formatLanzouURL(data.lanzou.linux_arm64_deb_key
 let linux_arm64_tar_gz_type = 'linux_arm64_portable.tar.gz'
 let linux_arm64_tar_gz_url = formatURL(linux_arm64_tar_gz_type)
 let linux_arm64_tar_gz_url_lanzou = formatLanzouURL(data.lanzou.linux_arm64_tar_gz_key)
+
+let linux_arm64_rpm_type = 'linux_aarch64.rpm'
+let linux_arm64_rpm_url = formatURL(linux_arm64_rpm_type)
+let linux_arm64_rpm_url_lanzou = formatLanzouURL(data.lanzou.linux_arm64_rpm_key)
+
+let linux_arm64_appimage_type = 'linux_aarch64.AppImage'
+let linux_arm64_appimage_url = formatURL(linux_arm64_appimage_type)
+let linux_arm64_appimage_url_lanzou = formatLanzouURL(data.lanzou.linux_arm64_appimage_key)
 
 // macOS
 let macos_aarch64_type = 'macos_aarch64.dmg'
@@ -86,6 +103,8 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> <br> <a :href="linux_amd64_deb_url_lanzou" target="_blank">蓝奏云</a> |
+| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <span v-if="data.lanzou.linux_amd64_rpm_key"><a :href="linux_amd64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_amd64_rpm_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
+| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <span v-if="data.lanzou.linux_amd64_appimage_key"><a :href="linux_amd64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_amd64_appimage_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_amd64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
 
 ### ARM64 架构
@@ -95,7 +114,23 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> <br> <a :href="linux_arm64_deb_url_lanzou" target="_blank">蓝奏云</a> |
+| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <span v-if="data.lanzou.linux_arm64_rpm_key"><a :href="linux_arm64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_arm64_rpm_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
+| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <span v-if="data.lanzou.linux_arm64_appimage_key"><a :href="linux_arm64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_arm64_appimage_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_arm64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
+
+### 运行 AppImage
+
+AppImage 下载后默认没有可执行权限，需要先添加权限再运行：
+
+```bash
+# 添加可执行权限
+chmod +x Bili23-Downloader_*.AppImage
+
+# 运行
+./Bili23-Downloader_*.AppImage
+```
+
+也可以在文件管理器中右键该文件，进入属性并勾选「允许作为程序执行」，之后双击即可运行。
 
 ## macOS
 

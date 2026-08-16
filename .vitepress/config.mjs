@@ -47,6 +47,7 @@ export default defineConfig({
               { text: '媒体库刮削', link: '/doc/metadata-scraping' },
               { text: '自动解析分页', link: '/doc/auto-parse-page' },
               { text: '按关键词搜索', link: '/doc/keyword-search' },
+              { text: 'MCP 服务器', link: '/doc/mcp-server' },
             ]
           }
         ]
