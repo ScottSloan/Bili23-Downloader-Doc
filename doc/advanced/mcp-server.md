@@ -4,7 +4,7 @@
 MCP 服务器将在下一个版本（**2.15.0**）中提供，当前已发布的版本尚不支持。本页内容依据开发中的版本编写，实际行为请以发布后的版本为准。
 :::
 
-程序内置了一个 MCP（Model Context Protocol）服务器。开启后，支持该协议的 AI 客户端（如 Claude Code、Claude Desktop、Cherry Studio 等）就能直接操作下载器：解析链接、创建下载任务、查询进度、暂停或取消任务。
+程序内置了一个 MCP（Model Context Protocol）服务器。开启后，支持该协议的 AI 客户端（如 Claude Code、Claude Desktop、OpenAI Codex、Cherry Studio 等）就能直接操作下载器：解析链接、创建下载任务、查询进度、暂停或取消任务。
 
 配置完成后，你可以直接对 AI 说「把这个链接里的视频都下载下来」，解析与建立任务的过程由它自行完成。
 
@@ -31,7 +31,16 @@ MCP 服务器将在下一个版本（**2.15.0**）中提供，当前已发布的
 
 ## 配置 AI 客户端
 
-点击「客户端配置」右侧的**复制**按钮，会得到一段这样的配置：
+点击「客户端配置」右侧的**复制**按钮，会出现两个选项。**选哪个取决于你的客户端支持哪种连接方式**：
+
+| 选项 | 适用客户端 |
+| :--- | :--- |
+| HTTP 直连 | Claude Code、Cherry Studio 等支持远程 MCP 服务器的客户端 |
+| stdio 桥接 | Claude Desktop 等只接受本地服务器的客户端 |
+
+拿不准时可以先试 HTTP 直连，若客户端提示配置无效，再改用 stdio 桥接。
+
+### HTTP 直连
 
 ```json
 {
@@ -59,12 +68,48 @@ claude mcp add --transport http --scope user bili23 http://127.0.0.1:23330/mcp -
 不加这个参数时配置只写入当前项目的局部配置，部分运行环境不会加载它，表现为「连接显示正常，但一个工具都没有」。写入全局配置可以避免这个问题。
 :::
 
+### stdio 桥接
+
+部分客户端（如 Claude Desktop）的配置文件只接受 `command` 与 `args`，填入网址会被判定为无效条目直接跳过，并提示 *Some MCP servers could not be loaded*。此时请改用 stdio 桥接配置：
+
+```json
+{
+  "mcpServers": {
+    "bili23-downloader": {
+      "command": "C:\\Program Files\\Bili23-Downloader\\Bili23.exe",
+      "args": ["--mcp-stdio"]
+    }
+  }
+}
+```
+
+::: warning ⚠️ 请直接复制程序给出的配置
+其中的路径会随安装位置而变，请使用「客户端配置 → stdio 桥接」复制，不要照着手敲。
+:::
+
+这种方式由客户端以转发模式启动程序，再由它连接到程序本体。转发进程**不会**打开程序界面，也不占用额外的端口。
+
+相比 HTTP 直连，它还有两个好处：
+
+- **无需填写访问令牌**，转发进程会自行读取程序的配置。你在界面上重新生成令牌后，也不必再修改客户端配置。
+- **无需事先打开程序**，若程序尚未运行，它会自动启动。
+
+::: tip 💡 建议同时开启静默启动
+若程序原本没有运行，自动启动时会弹出主窗口，打断你手头的事。在 **[设置页] → [窗口行为]** 中开启「静默启动」，程序就会直接在后台运行，只在托盘中显示，体验更顺畅。
+
+程序已在运行时则不受影响：转发进程只会唤醒它，不会把窗口抢到前台。
+:::
+
 配置完成后需要**重新启动 AI 客户端**（或新开一个会话），它才会读取到新增的服务器。
 
-以下为 Claude Code 中的调用效果：
+## 示例
+### Claude Code
 <img src="../pic/using_in_claude_code_1.png" alt="Claude Code 使用示意图1">
 
 <img src="../pic/using_in_claude_code_2.png" alt="Claude Code 使用示意图2">
+
+### Claude Desktop
+<img src="../pic/using_in_claude_desktop.png" alt="Claude Desktop 使用示意图">
 
 ## 可用工具
 
@@ -112,6 +157,8 @@ claude mcp add --transport http --scope user bili23 http://127.0.0.1:23330/mcp -
 
 ::: details AI 客户端里找不到相关功能？
 依次检查：程序是否正在运行、MCP 服务器开关是否已打开、配置中的令牌是否与程序内一致、添加配置后是否重新启动了 AI 客户端。使用 Claude Code 时还需确认是否加了 `--scope user`。
+
+若客户端提示配置无效或条目被跳过，说明它不支持 HTTP 直连，请改用 stdio 桥接配置。
 :::
 
 ::: details 提示服务器启动失败？
@@ -119,7 +166,11 @@ claude mcp add --transport http --scope user bili23 http://127.0.0.1:23330/mcp -
 :::
 
 ::: details 关闭程序后还能用吗？
-不能。AI 客户端在启动时连接服务器，如果当时 Bili23 Downloader 没有运行，该次会话将无法使用这些功能，需要先打开程序再重新启动客户端。
+取决于所用的连接方式。
+
+HTTP 直连不能：AI 客户端在启动时连接服务器，如果当时 Bili23 Downloader 没有运行，该次会话将无法使用这些功能，需要先打开程序再重新启动客户端。
+
+stdio 桥接可以：转发进程会在需要时自动在后台启动程序。
 :::
 
 ::: details 提示需要登录或画质不足？
