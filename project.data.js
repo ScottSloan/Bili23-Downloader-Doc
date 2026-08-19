@@ -11,7 +11,6 @@ export default {
         linux_amd64_tar_gz_key: 'iF7Qv42d6cxg',
         linux_arm64_deb_key: 'iI6e342d6rzi',
         linux_arm64_tar_gz_key: 'iRcFf42d77la',
-        // rpm 与 AppImage 尚未发布，填入蓝奏云 key 后页面会自动显示下载链接
         linux_amd64_rpm_key: '',
         linux_amd64_appimage_key: '',
         linux_arm64_rpm_key: '',

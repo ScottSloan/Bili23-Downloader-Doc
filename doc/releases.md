@@ -103,8 +103,8 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> <br> <a :href="linux_amd64_deb_url_lanzou" target="_blank">蓝奏云</a> |
-| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <span v-if="data.lanzou.linux_amd64_rpm_key"><a :href="linux_amd64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_amd64_rpm_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
-| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <span v-if="data.lanzou.linux_amd64_appimage_key"><a :href="linux_amd64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_amd64_appimage_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
+| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <a :href="linux_amd64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_amd64_rpm_url_lanzou" target="_blank">蓝奏云</a> |
+| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <a :href="linux_amd64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_amd64_appimage_url_lanzou" target="_blank">蓝奏云</a> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_amd64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
 
 ### ARM64 架构
@@ -114,8 +114,8 @@ let macos_x86_64_url_lanzou = formatLanzouURL(data.lanzou.macos_x86_64_key)
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
 | Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> <br> <a :href="linux_arm64_deb_url_lanzou" target="_blank">蓝奏云</a> |
-| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <span v-if="data.lanzou.linux_arm64_rpm_key"><a :href="linux_arm64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_arm64_rpm_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
-| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <span v-if="data.lanzou.linux_arm64_appimage_key"><a :href="linux_arm64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_arm64_appimage_url_lanzou" target="_blank">蓝奏云</a></span><span v-else>即将推出</span> |
+| Fedora / RHEL / openSUSE | rpm 安装包 | 原生安装程序 | <a :href="linux_arm64_rpm_url" target="_blank">Github</a> <br> <a :href="linux_arm64_rpm_url_lanzou" target="_blank">蓝奏云</a> |
+| Linux 通用 | AppImage | 免安装，添加可执行权限后直接运行 | <a :href="linux_arm64_appimage_url" target="_blank">Github</a> <br> <a :href="linux_arm64_appimage_url_lanzou" target="_blank">蓝奏云</a> |
 | Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_arm64_tar_gz_url_lanzou" target="_blank">蓝奏云</a> |
 
 ### 运行 AppImage
