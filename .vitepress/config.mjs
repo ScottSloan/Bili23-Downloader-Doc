@@ -58,6 +58,7 @@ export default defineConfig({
         items: [
           { text: '社区交流', link: '/doc/community' },
           { text: '使用协议', link: '/doc/terms' },
+          { text: '隐私政策', link: '/doc/privacy' },
           { text: '关于与支持', link: '/doc/about' }
         ]
       }
